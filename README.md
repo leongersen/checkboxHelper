@@ -8,18 +8,18 @@ Unify checkbox behaviour acros browsers.
 
 Set a group of checkboxes to any state using the `cb` helper:
 
-```JavaScript:
+```JavaScript
 var boxes = $(':checkbox');
 
 boxes.cb('disabled'); // Unchecks, disables all checkboxes;
-boxes.cb('undetermined'); // Sets all checkboxes to undetermined and enables them, markes them `checked` if required;
+boxes.cb('undetermined'); // Sets all checkboxes undetermined, enabled, checked if required;
 boxes.cb('off'); // Uncheckes, enables, all checkboxes;
 boxes.cb('checked'); // Checks, enables all checkboxes;
 ```
 
 To test the state of a checkbox:
 
-```JavaScript:
+```JavaScript
 var box = $(':checkbox');
 
 box.cb(':disabled'); // True if disabled;
