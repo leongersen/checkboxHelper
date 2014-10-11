@@ -1,10 +1,13 @@
 checkboxHelper
 ==============
 
-Unify checkbox behaviour acros browsers.
+jQuery plugin to unify checkbox behaviour across browsers. Based on this [jQuery issue](https://github.com/jquery/jquery/issues/1698) and this [question on StackOverflow](http://stackoverflow.com/questions/10099158/how-to-deal-with-browser-differences-with-indeterminate-checkbox).
+
+For more info on `undetermined` checkboxes, see [this CSStricks article](http://css-tricks.com/indeterminate-checkboxes/).
 
 + Checkboxes go to `checked` when click in `undetermined` state;
 + Checkboxes in `undetermined` state fire the change event;
++ Works for mouse and keyboard interactions;
 
 Set a group of checkboxes to any state using the `cb` helper:
 
