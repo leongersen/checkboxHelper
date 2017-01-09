@@ -50,11 +50,7 @@
 		}
 
 		// Check if the checkbox is now checked and cache the result
-		if ( test.checked ) {
-			checkedState = false;
-		} else {
-			checkedState = true;
-		}
+		checkedState == !test.checked;
 	}
 
 	function isChecked ( n ) {
