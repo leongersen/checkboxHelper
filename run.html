@@ -1,18 +1,23 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<input type="checkbox">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkbox helper</title>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="checkboxHelper.js"></script>
+    <script>
+    $(function() {
+        var input = $('input');
+        input.cb('indeterminate').on('change', function() {
+            console.log('change');
+        });
+    });
+    </script>
+</head>
 
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="checkboxHelper.js"></script>
+<body>
+    <input type="checkbox">
+</body>
 
-<script>
-
-$(function(){
-
-	var input = $('input');
-
-	input.cb('indeterminate').on('change', function(){
-		console.log('change');
-	});
-});
-</script>
+</html>
