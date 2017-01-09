@@ -24,14 +24,17 @@
 		test.type = "checkbox";
 		test.checked = false;
 		test.indeterminate = true;
-
+		//cache $(test)
+		$test = $(test);
+		//See the next links about selectors caching
+		//https://ttmm.io/tech/selector-caching-jquery/
+		//https://pseudosavant.com/blog/2014/01/30/js-101-cache-your-selectors/
 		// Prevent clicks flowing into the document.
-		$(test).on("click", function(e) {
+		$test.on("click", function(e) {
 			e.stopPropagation();
-		});
-
-		// Prevent changes flowing into the document. Keep track of state.
-		$(test).on("change", function(e) {
+			//No need to write $(test).on again
+		}).on("change", function(e) {
+			// Prevent changes flowing into the document. Keep track of state.
 			changeHasFired = true;
 			e.stopPropagation();
 		});
